@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color picker</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #fdf0d5;
+        }
+
+        #mainCont {
+            
+            min-width: 150px;
+            width: max-content;
+        }
+
+        #mainCont>h1 {
+            font-family: lobster, sans-serif;
+            color: #c1121f;
+            margin: 0;
+            margin-bottom: 15px;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        #picker_btn {
+            padding: 5px 7px;
+            border-radius: 10px;
+            background-color: #ffa5ab;
+            border: 1px solid black;
+            font-size: 15px;
+            width: 100%;
+            text-align: center;
+            margin: 0px 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        #picker_btn:hover {
+            background-color: #da627d;
+            color: white;
+        }
+
+        #result {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 5px;
+            list-style: none;
+            grid-gap: 10px;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        #result>li {
+            cursor: pointer;
+            padding: 2px 5px;
+            font-weight: bolder;
+            font-size: 15px;
+            border: 1px solid black;
+            border-radius: 5px;
+            text-shadow: 0.5px 0.5px 0 #cfcfcf, -0.5px -0.5px 0 #cfcfcf, 0.5px -0.5px 0 #cfcfcf, -0.5px 0.5px 0 #cfcfcf;
+        }
+
+        .errorLabel {
+            color: white;
+            font-weight: bold;
+            padding: 5px;
+            text-align: center;
+            margin: 0;
+            margin-top: 20px;
+            font-size: 14px;
+            border-radius: 10px;
+        }
+
+        #ClearButton {
+            padding: 5px 7px;
+            border-radius: 10px;
+            background-color: #ffa5ab;
+            color: white;
+            border: 1px solid black;
+            font-size: 15px;
+            width: 100%;
+            text-align: center;
+            margin: 0px 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        #ClearButton:hover {
+            background-color: #da627d;
+            color: black;
+        }
+
+        #footer{
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #footer a{
+            text-decoration: none;
+        }
+        #footer a:hover{
+            color: #000000;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="popupContainer">
+      <div id="mainCont">
+        <h1>Web Color Grabber</h1>
+        <div id="picker_btn_cont"></div>
+        <ul id="result"></ul>
+      </div>
+
+      <div id="footer">
+        <a href="https://github.com/pranavverma1504" target="_blank">
+          🔗 View on GitHub
+        </a>
+      </div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+
+</html>
